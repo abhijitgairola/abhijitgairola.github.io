@@ -59,7 +59,7 @@ function success(e) {
           check_stop_recording(document.getElementById("record"));
           var http = new XMLHttpRequest();
           var url = "https://ancient-beyond-10162.herokuapp.com/zicly/hfs/";
-          if (location.window != 'https:') {
+          if (location.protocol != 'https:') {
             url = "http://192.168.0.102:8080/zicly/hfs/";
           }
           
