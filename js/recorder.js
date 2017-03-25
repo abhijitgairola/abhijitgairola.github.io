@@ -58,8 +58,11 @@ function success(e) {
         if (recordingLength == bufferSize * 20) {
           check_stop_recording(document.getElementById("record"));
           var http = new XMLHttpRequest();
-          // var url = "https://ancient-beyond-10162.herokuapp.com/zicly/hfs/";
-          var url = "http://192.168.0.102:8080/zicly/hfs/";
+          var url = "https://ancient-beyond-10162.herokuapp.com/zicly/hfs/";
+          if (location.window != 'https:') {
+            url = "http://192.168.0.102:8080/zicly/hfs/";
+          }
+          
           http.open("POST", url, true);
           http.setRequestHeader("Content-type", "application/json");
 
